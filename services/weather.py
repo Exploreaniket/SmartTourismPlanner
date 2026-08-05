@@ -3,7 +3,6 @@ import requests
 
 def get_weather(lat, lon):
     try:
-
         url = (
             "https://api.open-meteo.com/v1/forecast"
             f"?latitude={lat}"
@@ -18,7 +17,32 @@ def get_weather(lat, lon):
             "&timezone=auto"
         )
 
-        response = requests.get(url, timeout=10)
+        response = requests.get(
+            url,
+            timeout=10,
+            headers={
+                "User-Agent": "SmartTourismPlanner/1.0"
+            }
+        )
+
+        # Handle rate limit
+        if response.status_code == 429:
+            print("Open-Meteo rate limit exceeded.")
+
+            return {
+                "temperature": "--",
+                "feels_like": "--",
+                "humidity": "--",
+                "wind": "--",
+                "weather_code": 0,
+                "description": "Weather Temporarily Unavailable",
+                "icon": "🌤️",
+                "is_day": 1,
+                "sunrise": "--",
+                "sunset": "--",
+                "advice": "Weather service is busy. Please try again in a few minutes."
+            }
+
         response.raise_for_status()
 
         data = response.json()
@@ -27,12 +51,8 @@ def get_weather(lat, lon):
         daily = data.get("daily")
 
         if not current or not daily:
-            print("Weather API returned unexpected data:", data)
+            print("Weather API returned unexpected data.")
             return None
-
-        # =====================================================
-        # WEATHER CODE MAPPING
-        # =====================================================
 
         weather_codes = {
             0: ("Clear Sky", "☀️"),
@@ -48,7 +68,7 @@ def get_weather(lat, lon):
             57: ("Heavy Freezing Drizzle", "🌨"),
             61: ("Light Rain", "🌦"),
             63: ("Moderate Rain", "🌧"),
-            65: ("Heavy Rain", "⛈"),
+            65: ("Heavy Rain", "🌧"),
             66: ("Freezing Rain", "🌨"),
             67: ("Heavy Freezing Rain", "🌨"),
             71: ("Light Snow", "❄️"),
@@ -70,24 +90,16 @@ def get_weather(lat, lon):
             ("Unknown Weather", "🌍")
         )
 
-        # =====================================================
-        # TRAVEL ADVICE
-        # =====================================================
-
         temperature = current.get("temperature_2m", 0)
 
         if temperature >= 35:
             advice = "🥤 Stay hydrated and avoid direct sunlight."
-
         elif temperature >= 28:
             advice = "😎 Great weather for sightseeing. Carry sunglasses."
-
         elif temperature >= 20:
             advice = "🚶 Pleasant weather for outdoor activities."
-
         elif temperature >= 10:
             advice = "🧥 Carry a light jacket for the evening."
-
         else:
             advice = "❄️ Wear warm clothes and stay protected from the cold."
 
@@ -113,4 +125,17 @@ def get_weather(lat, lon):
 
     except Exception as e:
         print("Weather Error:", e)
-        return None
+
+        return {
+            "temperature": "--",
+            "feels_like": "--",
+            "humidity": "--",
+            "wind": "--",
+            "weather_code": 0,
+            "description": "Weather Unavailable",
+            "icon": "🌤️",
+            "is_day": 1,
+            "sunrise": "--",
+            "sunset": "--",
+            "advice": "Unable to fetch weather information."
+        }

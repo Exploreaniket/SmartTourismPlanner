@@ -146,6 +146,8 @@ async function sendTripRequest(formData) {
         }
 
         const trip = await response.json();
+        console.log("Trip JSON:", trip);
+console.log("Weather:", trip.weather);
 
         currentTrip = trip;
 

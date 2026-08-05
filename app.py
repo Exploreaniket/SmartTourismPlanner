@@ -89,7 +89,17 @@ def generate():
                 coords["lon"]
             )
 
-            trip["weather"] = weather
+            trip["weather"] = weather if weather else {
+    "temperature": "--",
+    "feels_like": "--",
+    "humidity": "--",
+    "wind": "--",
+    "description": "Weather Unavailable",
+    "icon": "🌤️",
+    "sunrise": "--",
+    "sunset": "--",
+    "advice": "Weather service is temporarily unavailable."
+}
 
             print("Weather Added")
 
