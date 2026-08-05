@@ -1,0 +1,613 @@
+/* ==========================================================
+                    NAVBAR V4 (PART 2A)
+   Inspired by Airbnb • Apple • Google Travel
+========================================================== */
+
+/* -------------------- NAVBAR -------------------- */
+
+.navbar{
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+
+    z-index:9999;
+
+    padding:18px 0;
+
+    transition:.45s ease;
+
+    background:rgba(8,15,35,.18);
+
+    backdrop-filter:blur(22px);
+    -webkit-backdrop-filter:blur(22px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+/* Scroll Effect */
+
+.navbar.scrolled{
+
+    padding:10px 0;
+
+    background:rgba(8,15,35,.92);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+}
+
+/* -------------------- CONTAINER -------------------- */
+
+.navbar .container-fluid{
+
+    max-width:1750px;
+
+}
+
+/* -------------------- BRAND -------------------- */
+
+.navbar-brand{
+
+    display:flex;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    gap:18px;
+
+}
+
+/* Logo */
+
+.logo-img{
+
+    width:65px;
+
+    height:65px;
+
+    object-fit:contain;
+
+    transition:.4s;
+
+}
+
+.navbar.scrolled .logo-img{
+
+    width:55px;
+
+    height:55px;
+
+}
+
+.logo-img:hover{
+
+    transform:rotate(-6deg) scale(1.08);
+
+}
+
+/* Brand Text */
+
+.brand-text{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.brand-text h3{
+
+    color:white;
+
+    margin:0;
+
+    font-size:31px;
+
+    font-weight:800;
+
+    line-height:1;
+
+}
+
+.brand-text span{
+
+    margin-top:6px;
+
+    color:#FACC15;
+
+    letter-spacing:2px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+/* -------------------- MENU -------------------- */
+
+.navbar-nav{
+
+    gap:24px;
+
+}
+
+.nav-link{
+
+    color:white !important;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    position:relative;
+
+    transition:.35s;
+
+    padding:10px 0 !important;
+
+}
+
+.nav-link::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-5px;
+
+    width:0;
+
+    height:3px;
+
+    border-radius:50px;
+
+    background:#FACC15;
+
+    transition:.35s;
+
+}
+
+.nav-link:hover{
+
+    color:#FACC15 !important;
+
+}
+
+.nav-link:hover::after{
+
+    width:100%;
+
+}
+
+.nav-link.active{
+
+    color:#FACC15 !important;
+
+}
+
+.nav-link.active::after{
+
+    width:100%;
+
+}
+
+/* -------------------- RIGHT SIDE -------------------- */
+
+.nav-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+/* -------------------- SEARCH -------------------- */
+
+.search-container{
+
+    width:200px;
+
+    height:52px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:0 20px;
+
+    border-radius:60px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    backdrop-filter:blur(15px);
+
+    transition:.35s;
+
+}
+
+.search-container:hover{
+
+    background:white;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 15px 35px rgba(37,99,235,.18);
+
+}
+
+.search-container i{
+
+    color:white;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.search-container:hover i{
+
+    color:#2563EB;
+
+}
+
+.search-container input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    color:#0F172A;
+
+    font-size:15px;
+
+}
+
+.search-container input::placeholder{
+
+    color:#94A3B8;
+
+}
+
+/* ==========================================================
+                    NAVBAR V4 (PART 2B)
+========================================================== */
+
+/* ---------------- LOGIN ---------------- */
+
+.login-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 22px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    color:#ffffff;
+
+    font-weight:600;
+
+    font-size:16px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    backdrop-filter:blur(12px);
+
+    transition:.35s;
+
+}
+
+.login-btn i{
+
+    font-size:18px;
+
+}
+
+.login-btn:hover{
+
+    background:white;
+
+    color:#2563EB;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 35px rgba(37,99,235,.18);
+
+}
+
+
+/* ---------------- START BUTTON ---------------- */
+
+.start-btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:14px 30px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-weight:700;
+
+    background:linear-gradient(
+        135deg,
+        #2563EB,
+        #06B6D4
+    );
+
+    transition:.4s;
+
+    box-shadow:0 18px 40px rgba(37,99,235,.30);
+
+}
+
+.start-btn:hover{
+
+    color:white;
+
+    transform:translateY(-4px);
+
+    box-shadow:0 25px 55px rgba(37,99,235,.45);
+
+}
+
+/* Moving Light */
+
+.start-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-120%;
+
+    top:0;
+
+    width:80%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.45),
+
+        transparent
+
+    );
+
+    transform:skewX(-25deg);
+
+    transition:.8s;
+
+}
+
+.start-btn:hover::before{
+
+    left:130%;
+
+}
+
+/* Pulse Glow */
+
+.start-btn{
+
+    animation:buttonGlow 3s infinite;
+
+}
+
+@keyframes buttonGlow{
+
+0%{
+
+box-shadow:0 15px 35px rgba(37,99,235,.25);
+
+}
+
+50%{
+
+box-shadow:0 25px 60px rgba(37,99,235,.50);
+
+}
+
+100%{
+
+box-shadow:0 15px 35px rgba(37,99,235,.25);
+
+}
+
+}
+
+
+/* ---------------- MOBILE ---------------- */
+
+.navbar-toggler{
+
+    border:none;
+
+    color:white;
+
+    font-size:28px;
+
+}
+
+.navbar-toggler:focus{
+
+    box-shadow:none;
+
+}
+
+@media(max-width:1200px){
+
+.navbar-collapse{
+
+margin-top:25px;
+
+padding:25px;
+
+border-radius:25px;
+
+background:rgba(8,15,35,.96);
+
+backdrop-filter:blur(25px);
+
+}
+
+.navbar-nav{
+
+gap:14px;
+
+margin-bottom:25px;
+
+}
+
+.nav-actions{
+
+flex-direction:column;
+
+align-items:stretch;
+
+}
+
+.search-container{
+
+width:100%;
+
+}
+
+.login-btn{
+
+justify-content:center;
+
+}
+
+.start-btn{
+
+width:100%;
+
+}
+
+}
+
+
+/* ---------------- ANIMATION ---------------- */
+
+.navbar{
+
+animation:slideDown .8s ease;
+
+}
+
+@keyframes slideDown{
+
+0%{
+
+opacity:0;
+
+transform:translateY(-80px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media(max-width:992px){
+
+.brand-text h3{
+
+font-size:24px;
+
+}
+
+.logo-img{
+
+width:65px;
+
+height:65px;
+
+}
+
+.search-container{
+
+height:50px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.brand-text{
+
+display:none;
+
+}
+
+.logo-img{
+
+width:58px;
+
+height:58px;
+
+}
+
+.navbar{
+
+padding:12px 0;
+
+}
+
+}

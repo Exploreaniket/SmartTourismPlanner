@@ -1,0 +1,410 @@
+/* ==========================================
+   GLOBAL RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ==========================================
+   ROOT COLORS
+========================================== */
+
+:root{
+
+    --primary:#2563EB;
+
+    --secondary:#06B6D4;
+
+    --accent:#F59E0B;
+
+    --dark:#0F172A;
+
+    --light:#F8FAFC;
+
+    --white:#FFFFFF;
+
+    --text:#334155;
+
+    --border:#E2E8F0;
+
+}
+
+/* ==========================================
+   HTML
+========================================== */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+/* ==========================================
+   BODY
+========================================== */
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:var(--light);
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
+    line-height:1.6;
+
+}
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+/* ==========================================
+   SECTION
+========================================== */
+
+section{
+
+    padding:100px 0;
+
+}
+
+/* ==========================================
+   HEADINGS
+========================================== */
+
+h1,h2,h3,h4,h5,h6{
+
+    font-weight:700;
+
+    color:var(--dark);
+
+}
+
+h1{
+
+    font-size:64px;
+
+}
+
+h2{
+
+    font-size:42px;
+
+}
+
+h3{
+
+    font-size:32px;
+
+}
+
+p{
+
+    color:#64748B;
+
+    font-size:17px;
+
+}
+
+/* ==========================================
+   LINKS
+========================================== */
+
+a{
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.btn{
+
+    border-radius:50px;
+
+    padding:14px 35px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* ==========================================
+   IMAGES
+========================================== */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/* ==========================================
+   CARDS
+========================================== */
+
+.card{
+
+    border:none;
+
+    border-radius:20px;
+
+    transition:.4s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/* ==========================================
+   GLASS EFFECT
+========================================== */
+
+.glass{
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.20);
+
+    border-radius:20px;
+
+}
+
+/* ==========================================
+   UTILITIES
+========================================== */
+
+.text-primary{
+
+    color:var(--primary)!important;
+
+}
+
+.text-accent{
+
+    color:var(--accent)!important;
+
+}
+
+.bg-primary{
+
+    background:var(--primary)!important;
+
+}
+
+.bg-dark{
+
+    background:var(--dark)!important;
+
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#E2E8F0;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#1D4ED8;
+
+}
+/* ===================================================
+   WEATHER CARD
+=================================================== */
+
+.weather-card{
+
+    background:linear-gradient(135deg,#3b82f6,#2563eb);
+
+    color:rgb(207, 68, 68);
+
+}
+
+.weather-main{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+    margin-bottom:20px;
+
+}
+
+.weather-icon{
+
+    font-size:70px;
+
+}
+
+.weather-main h1{
+
+    font-size:52px;
+
+    margin:0;
+
+}
+
+.weather-main h2{
+
+    margin-bottom:5px;
+
+}
+
+.weather-advice{
+
+    margin-top:25px;
+
+    background:rgba(255,255,255,.15);
+
+    padding:15px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+}
+
+.custom-map-icon{
+
+    background:transparent;
+
+    border:none;
+
+    text-align:center;
+
+}
+
+.custom-map-icon i{
+
+    filter:drop-shadow(0 3px 8px rgba(0,0,0,.35));
+
+    transition:.3s;
+
+}
+
+.custom-map-icon:hover i{
+
+    transform:scale(1.25);
+
+}
+.planner-loader{
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(255,255,255,0.95);
+
+    z-index: 99999;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+/* ==========================================
+        TOAST
+========================================== */
+
+.custom-toast{
+
+    position:fixed;
+
+    top:90px;
+
+    right:30px;
+
+    background:#dc3545;
+
+    color:#fff;
+
+    padding:15px 22px;
+
+    border-radius:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.25);
+
+    transform:translateX(400px);
+
+    transition:.4s;
+
+    z-index:99999;
+
+}
+
+.custom-toast.show{
+
+    transform:translateX(0);
+
+}
+
+.custom-toast i{
+
+    font-size:20px;
+
+}

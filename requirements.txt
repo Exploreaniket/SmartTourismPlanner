@@ -1,0 +1,4 @@
+Flask
+python-dotenv
+google-genai
+requests

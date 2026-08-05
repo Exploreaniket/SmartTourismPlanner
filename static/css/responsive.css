@@ -1,0 +1,1158 @@
+/* ==========================================================
+                    RESPONSIVE
+========================================================== */
+
+/* ---------------- LARGE LAPTOP ---------------- */
+
+@media (max-width:1400px){
+
+    .navbar .container-fluid{
+
+        padding:0 25px;
+
+    }
+
+    .navbar-nav{
+
+        gap:16px;
+
+    }
+
+    .search-container{
+
+        width:220px;
+
+    }
+
+}
+
+
+/* ---------------- LAPTOP ---------------- */
+
+@media (max-width:1200px){
+
+    .brand-text h3{
+
+        font-size:24px;
+
+    }
+
+    .brand-text span{
+
+        font-size:12px;
+
+        letter-spacing:1px;
+
+    }
+
+    .logo-img{
+
+        width:60px;
+
+        height:60px;
+
+    }
+
+    .search-container{
+
+        width:180px;
+
+    }
+
+}
+
+
+/* ---------------- TABLET ---------------- */
+
+@media (max-width:991px){
+
+    .navbar-collapse{
+
+        background:#081325;
+
+        padding:25px;
+
+        border-radius:20px;
+
+        margin-top:15px;
+
+    }
+
+    .navbar-nav{
+
+        text-align:center;
+
+        gap:10px;
+
+        margin-bottom:25px;
+
+    }
+
+    .nav-actions{
+
+        display:flex;
+
+        flex-direction:column;
+
+        width:100%;
+
+        gap:15px;
+
+    }
+
+    .search-container{
+
+        width:100%;
+
+    }
+
+    .search-container input{
+
+        width:100%;
+
+    }
+
+    .login-btn,
+
+    .start-btn{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+}
+
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width:768px){
+
+    .navbar{
+
+        padding:12px 0;
+
+    }
+
+    .brand-text{
+
+        display:none;
+
+    }
+
+    .logo-img{
+
+        width:55px;
+
+        height:55px;
+
+    }
+
+    .search-container{
+
+        margin-top:10px;
+
+    }
+
+}
+
+
+/* ---------------- SMALL MOBILE ---------------- */
+
+@media (max-width:576px){
+
+    .navbar .container-fluid{
+
+        padding:0 15px;
+
+    }
+
+    .logo-img{
+
+        width:50px;
+
+        height:50px;
+
+    }
+
+    .search-container{
+
+        height:48px;
+
+    }
+
+}
+/* ==========================================================
+                    HERO RESPONSIVE
+========================================================== */
+
+@media (max-width:1200px){
+
+    .hero{
+
+        padding-top:140px;
+
+    }
+
+    .hero-content h1{
+
+        font-size:52px;
+
+        line-height:1.2;
+
+    }
+
+    .hero-content p{
+
+        font-size:18px;
+
+    }
+
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width:992px){
+
+    .hero{
+
+        text-align:center;
+
+        padding-top:130px;
+
+        padding-bottom:70px;
+
+    }
+
+    .hero-content{
+
+        margin-bottom:50px;
+
+    }
+
+    .hero-content h1{
+
+        font-size:44px;
+
+    }
+
+    .hero-content p{
+
+        font-size:17px;
+
+    }
+
+    .hero-buttons{
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+        gap:15px;
+
+    }
+
+    .hero-image{
+
+        margin-top:30px;
+
+    }
+
+    .hero-image img{
+
+        width:85%;
+
+        margin:auto;
+
+        display:block;
+
+    }
+
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width:768px){
+
+    .hero{
+
+        padding-top:120px;
+
+        padding-bottom:60px;
+
+    }
+
+    .hero-content h1{
+
+        font-size:34px;
+
+    }
+
+    .hero-content p{
+
+        font-size:16px;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .hero-buttons .btn{
+
+        width:100%;
+
+        max-width:320px;
+
+    }
+
+    .hero-image img{
+
+        width:100%;
+
+    }
+
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width:576px){
+
+    .hero{
+
+        padding-top:110px;
+
+    }
+
+    .hero-content h1{
+
+        font-size:28px;
+
+    }
+
+    .hero-content p{
+
+        font-size:15px;
+
+    }
+
+}
+/* ==========================================================
+                    FEATURES RESPONSIVE
+========================================================== */
+
+/* ===================== Laptop ===================== */
+
+@media (max-width:1200px){
+
+    .features-section{
+
+        padding:80px 0;
+
+    }
+
+    .feature-card{
+
+        padding:30px;
+
+    }
+
+}
+
+
+/* ===================== Tablet ===================== */
+
+@media (max-width:992px){
+
+    .features-section{
+
+        padding:70px 0;
+
+    }
+
+    .features-section .row{
+
+        row-gap:30px;
+
+    }
+
+    .feature-card{
+
+        height:100%;
+
+        text-align:center;
+
+    }
+
+    .feature-icon{
+
+        margin:0 auto 20px;
+
+    }
+
+}
+
+
+/* ===================== Mobile ===================== */
+
+@media (max-width:768px){
+
+    .features-section{
+
+        padding:60px 0;
+
+    }
+
+    .features-section h2{
+
+        font-size:34px;
+
+    }
+
+    .features-section p{
+
+        font-size:16px;
+
+    }
+
+    .feature-card{
+
+        padding:25px;
+
+    }
+
+    .feature-icon{
+
+        width:70px;
+
+        height:70px;
+
+        font-size:28px;
+
+    }
+
+    .feature-card h3{
+
+        font-size:22px;
+
+    }
+
+}
+
+
+/* ===================== Small Mobile ===================== */
+
+@media (max-width:576px){
+
+    .features-section{
+
+        padding:50px 0;
+
+    }
+
+    .features-section h2{
+
+        font-size:28px;
+
+    }
+
+    .feature-card{
+
+        padding:20px;
+
+        border-radius:18px;
+
+    }
+
+    .feature-card h3{
+
+        font-size:20px;
+
+    }
+
+    .feature-card p{
+
+        font-size:15px;
+
+    }
+
+}
+/* ==========================================================
+                DESTINATIONS RESPONSIVE
+========================================================== */
+
+/* ===================== Laptop ===================== */
+
+@media (max-width:1200px){
+
+    .destinations-section{
+
+        padding:80px 0;
+
+    }
+
+    .destination-card{
+
+        margin-bottom:30px;
+
+    }
+
+}
+
+
+/* ===================== Tablet ===================== */
+
+@media (max-width:992px){
+
+    .destinations-section{
+
+        padding:70px 0;
+
+    }
+
+    .destination-card{
+
+        margin-bottom:30px;
+
+        height:100%;
+
+    }
+
+    .destination-card img{
+
+        height:240px;
+
+        object-fit:cover;
+
+    }
+
+}
+
+
+/* ===================== Mobile ===================== */
+
+@media (max-width:768px){
+
+    .destinations-section{
+
+        padding:60px 0;
+
+    }
+
+    .destinations-section h2{
+
+        font-size:34px;
+
+    }
+
+    .destinations-section p{
+
+        font-size:16px;
+
+    }
+
+    .destination-card{
+
+        margin-bottom:25px;
+
+    }
+
+    .destination-card img{
+
+        height:220px;
+
+        object-fit:cover;
+
+    }
+
+    .destination-content{
+
+        padding:20px;
+
+    }
+
+    .destination-content h3{
+
+        font-size:22px;
+
+    }
+
+}
+
+
+/* ===================== Small Mobile ===================== */
+
+@media (max-width:576px){
+
+    .destinations-section{
+
+        padding:50px 0;
+
+    }
+
+    .destinations-section h2{
+
+        font-size:28px;
+
+    }
+
+    .destination-card{
+
+        border-radius:18px;
+
+    }
+
+    .destination-card img{
+
+        height:200px;
+
+    }
+
+    .destination-content{
+
+        padding:18px;
+
+    }
+
+    .destination-content h3{
+
+        font-size:20px;
+
+    }
+
+    .destination-content p{
+
+        font-size:15px;
+
+    }
+
+}
+/* ==========================================================
+                AI PLANNER RESPONSIVE
+========================================================== */
+
+/* ===================== Laptop ===================== */
+
+@media (max-width:1200px){
+
+    .planner-section{
+
+        padding:80px 0;
+
+    }
+
+}
+
+
+/* ===================== Tablet ===================== */
+
+@media (max-width:992px){
+
+    .planner-section{
+
+        padding:70px 0;
+
+    }
+
+    .planner-card{
+
+        padding:35px;
+
+    }
+
+    .planner-section h2{
+
+        font-size:36px;
+
+    }
+
+    .planner-form .row{
+
+        row-gap:20px;
+
+    }
+
+}
+
+
+/* ===================== Mobile ===================== */
+
+@media (max-width:768px){
+
+    .planner-section{
+
+        padding:60px 0;
+
+    }
+
+    .planner-card{
+
+        padding:25px;
+
+        border-radius:20px;
+
+    }
+
+    .planner-section h2{
+
+        font-size:30px;
+
+        text-align:center;
+
+    }
+
+    .planner-section p{
+
+        text-align:center;
+
+        font-size:15px;
+
+    }
+
+    .planner-form .row{
+
+        row-gap:18px;
+
+    }
+
+    .planner-form input,
+
+    .planner-form select,
+
+    .planner-form textarea{
+
+        width:100%;
+
+        font-size:15px;
+
+    }
+
+    .planner-form .btn{
+
+        width:100%;
+
+        margin-top:15px;
+
+    }
+
+}
+
+
+/* ===================== Small Mobile ===================== */
+
+@media (max-width:576px){
+
+    .planner-card{
+
+        padding:20px;
+
+    }
+
+    .planner-section h2{
+
+        font-size:26px;
+
+    }
+
+    .planner-section p{
+
+        font-size:14px;
+
+    }
+
+    .planner-form label{
+
+        font-size:14px;
+
+    }
+
+    .planner-form input,
+
+    .planner-form select{
+
+        height:48px;
+
+    }
+
+    .planner-form .btn{
+
+        height:50px;
+
+        font-size:16px;
+
+    }
+
+}
+/* ==========================================================
+                AI DASHBOARD RESPONSIVE
+========================================================== */
+
+/* ===================== Laptop ===================== */
+
+@media (max-width:1200px){
+
+    .trip-dashboard{
+
+        padding:25px;
+
+    }
+
+}
+
+
+/* ===================== Tablet ===================== */
+
+@media (max-width:992px){
+
+    .trip-dashboard{
+
+        padding:20px;
+
+    }
+
+    .summary-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:20px;
+
+    }
+
+    .dashboard-card{
+
+        margin-bottom:25px;
+
+    }
+
+    .weather-top{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        gap:20px;
+
+    }
+
+    .weather-main{
+
+        justify-content:center;
+
+    }
+
+    #travelMap{
+
+        height:420px;
+
+    }
+
+}
+
+
+/* ===================== Mobile ===================== */
+
+@media (max-width:768px){
+
+    .trip-dashboard{
+
+        padding:15px;
+
+    }
+
+    .summary-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .weather-main{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .weather-icon{
+
+        margin-bottom:15px;
+
+    }
+
+    .dashboard-card{
+
+        padding:20px;
+
+    }
+
+    .dashboard-card h2{
+
+        font-size:24px;
+
+    }
+
+    .dashboard-card h3{
+
+        font-size:20px;
+
+    }
+
+    .dashboard-card p{
+
+        font-size:15px;
+
+    }
+
+    .action-bar{
+
+        flex-direction:column;
+
+        gap:12px;
+
+    }
+
+    .action-bar .btn{
+
+        width:100%;
+
+    }
+
+    .budget-grid,
+
+    .hotel-grid,
+
+    .restaurant-grid,
+
+    .mustvisit-grid,
+
+    .packing-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    #travelMap{
+
+        height:350px;
+
+    }
+
+}
+
+
+/* ===================== Small Mobile ===================== */
+
+@media (max-width:576px){
+
+    .trip-dashboard{
+
+        padding:10px;
+
+    }
+
+    .dashboard-card{
+
+        padding:18px;
+
+        border-radius:18px;
+
+    }
+
+    .summary-box{
+
+        padding:15px;
+
+    }
+
+    .summary-box h5{
+
+        font-size:18px;
+
+    }
+
+    .weather-main h1{
+
+        font-size:36px;
+
+    }
+
+    .weather-main h2{
+
+        font-size:22px;
+
+    }
+
+    .weather-advice{
+
+        font-size:14px;
+
+    }
+
+    #travelMap{
+
+        height:300px;
+
+    }
+
+}
+/* ==========================================================
+                    FOOTER RESPONSIVE
+========================================================== */
+
+/* ===================== Laptop ===================== */
+
+@media (max-width:1200px){
+
+    .footer{
+
+        padding:70px 0 30px;
+
+    }
+
+}
+
+
+/* ===================== Tablet ===================== */
+
+@media (max-width:992px){
+
+    .footer{
+
+        text-align:center;
+
+    }
+
+    .footer .row{
+
+        row-gap:40px;
+
+    }
+
+    .footer-logo{
+
+        justify-content:center;
+
+    }
+
+    .footer-social{
+
+        justify-content:center;
+
+    }
+
+}
+
+
+/* ===================== Mobile ===================== */
+
+@media (max-width:768px){
+
+    .footer{
+
+        padding:60px 0 25px;
+
+    }
+
+    .footer h4,
+
+    .footer h5{
+
+        margin-top:20px;
+
+        font-size:22px;
+
+    }
+
+    .footer p,
+
+    .footer a,
+
+    .footer li{
+
+        font-size:15px;
+
+    }
+
+    .footer-links{
+
+        padding:0;
+
+    }
+
+    .footer-links li{
+
+        margin-bottom:12px;
+
+    }
+
+    .footer-social{
+
+        display:flex;
+
+        justify-content:center;
+
+        gap:15px;
+
+        flex-wrap:wrap;
+
+    }
+
+    .footer-social a{
+
+        width:45px;
+
+        height:45px;
+
+        display:flex;
+
+        align-items:center;
+
+        justify-content:center;
+
+        border-radius:50%;
+
+    }
+
+}
+
+
+/* ===================== Small Mobile ===================== */
+
+@media (max-width:576px){
+
+    .footer{
+
+        padding:50px 0 20px;
+
+    }
+
+    .footer h4,
+
+    .footer h5{
+
+        font-size:20px;
+
+    }
+
+    .footer p,
+
+    .footer a{
+
+        font-size:14px;
+
+    }
+
+    .footer-bottom{
+
+        text-align:center;
+
+        font-size:13px;
+
+    }
+
+}

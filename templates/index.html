@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+
+{% block title %}
+Smart Tourism Planner
+{% endblock %}
+
+{% block content %}
+{% include 'components/hero/hero.html' %}
+{% include 'components/features/features.html' %}
+{% include 'components/features/feature_modal.html' %}
+{% include 'components/destinations/destinations.html' %}
+{% include 'components/planner/planner.html' %}
+
+
+
+<!-- =======================================================
+                AI JOURNEY PLANNER MODAL
+======================================================== -->
+
+<div class="modal fade" id="plannerModal" tabindex="-1">
+
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+
+        <div class="modal-content feature-modal">
+
+            <div class="modal-header border-0">
+
+                <div class="d-flex align-items-center gap-3">
+
+                    <div class="modal-icon">
+
+                        <i class="fa-solid fa-robot"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="mb-0">
+
+                            AI Journey Planner
+
+                        </h3>
+
+                        <small>
+
+                            Personalized Travel Planning
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <button
+                    class="btn-close"
+                    data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <p>
+
+                    Our AI analyzes your travel preferences and creates a
+                    personalized journey based on your interests, travel style,
+                    duration, budget, and destination.
+
+                </p>
+
+                <div class="row mt-4">
+
+                    <div class="col-md-6">
+
+                        <div class="modal-item">
+
+                            <i class="fa-solid fa-check"></i>
+
+                            Personalized itinerary
+
+                        </div>
+
+                        <div class="modal-item">
+
+                            <i class="fa-solid fa-check"></i>
+
+                            Best travel route
+
+                        </div>
+
+                        <div class="modal-item">
+
+                            <i class="fa-solid fa-check"></i>
+
+                            Transport recommendation
+
+                        </div>
+
+                        <div class="modal-item">
+
+                            <i class="fa-solid fa-check"></i>
+
+                            Hotel suggestions
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <div class="modal-item">
+
+                            <i class="fa-solid fa-check"></i>
+
+                            Local food guide
+
+                        </div>
+
+                        <div class="modal-item">
+
+                            <i class="fa-solid fa-check"></i>
+
+                            Weather insights
+
+                        </div>
+
+                        <div class="modal-item">
+
+                            <i class="fa-solid fa-check"></i>
+
+                            Packing checklist
+
+                        </div>
+
+                        <div class="modal-item">
+
+                            <i class="fa-solid fa-check"></i>
+
+                            Budget estimation
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="modal-footer border-0">
+
+                <button
+                    class="btn btn-outline-secondary"
+                    data-bs-dismiss="modal">
+
+                    Close
+
+                </button>
+
+                <a
+                    href="#planner"
+                    class="btn btn-primary">
+
+                    Try AI Planner
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+{% endblock %}

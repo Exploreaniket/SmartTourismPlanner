@@ -1,0 +1,457 @@
+<!-- =======================================================
+                    AI TRIP PLANNER
+======================================================= -->
+
+<section class="planner-section" id="planner">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <!-- Left Side -->
+
+            <div class="col-lg-5">
+
+                <span class="planner-badge">
+
+                    🤖 AI Powered Planner
+
+                </span>
+
+                <h2 class="planner-title">
+
+                    Plan Your Dream Journey
+                    <span>In Seconds</span>
+
+                </h2>
+
+                <p class="planner-description">
+
+                    Our AI creates a personalized travel itinerary based on your destination,
+                    budget, duration and travel interests.
+
+                </p>
+
+                <div class="planner-feature">
+
+                    ✅ Personalized Itinerary
+
+                </div>
+
+                <div class="planner-feature">
+
+                    ✅ Hotel Recommendations
+
+                </div>
+
+                <div class="planner-feature">
+
+                    ✅ Restaurant Suggestions
+
+                </div>
+
+                <div class="planner-feature">
+
+                    ✅ Packing Checklist
+
+                </div>
+
+                <div class="planner-feature">
+
+                    ✅ Budget Planning
+
+                </div>
+
+            </div>
+
+            <!-- Right Side -->
+
+            <div class="col-lg-7">
+
+                <!-- =======================================================
+                PLANNER MODE SELECTOR
+======================================================= -->
+
+<div class="planner-mode">
+
+    <h4>
+
+        How would you like to plan your journey?
+
+    </h4>
+
+    <p>
+
+        Select your planning mode
+
+    </p>
+
+    <div class="planner-mode-grid">
+
+        <!-- Destination Mode -->
+
+        <div
+            class="mode-card active"
+            id="destinationMode">
+
+            <div class="mode-icon">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+            </div>
+
+            <h5>
+
+                Destination Trip
+
+            </h5>
+
+            <small>
+
+                Plan a trip to one destination
+
+            </small>
+
+        </div>
+
+        <!-- Route Mode -->
+
+        <div
+            class="mode-card"
+            id="routeMode">
+
+            <div class="mode-icon">
+
+                <i class="fa-solid fa-route"></i>
+
+            </div>
+
+            <h5>
+
+                From → To Journey
+
+            </h5>
+
+            <small>
+
+                Travel between two places
+
+            </small>
+
+        </div>
+
+    </div>
+
+</div>
+                <div class="planner-card">
+
+    <form id="plannerForm">
+
+        <input type="hidden" id="plannerMode" value="destination">
+<input
+    type="hidden"
+    id="tripType"
+    value="Solo">
+
+        <div class="planner-header">
+
+            <h3>
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                AI Travel Planner
+            </h3>
+
+            <p>
+                Fill in your travel details and let AI create a personalized itinerary.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Destination -->
+
+            <div class="col-12">
+
+                <label class="form-label">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Destination
+
+                </label>
+
+                <input
+                    type="text"
+                    class="form-control planner-input"
+                    id="destination"
+                    placeholder="Where would you like to go?"
+                    required>
+
+            </div>
+
+            <!-- Starting Point -->
+
+            <div
+                class="col-12 d-none"
+                id="fromField">
+
+                <label class="form-label">
+
+                    <i class="fa-solid fa-location-arrow"></i>
+
+                    Starting Point
+
+                </label>
+
+                <input
+                    type="text"
+                    class="form-control planner-input"
+                    id="fromDestination"
+                    placeholder="Enter your starting city">
+
+            </div>
+
+            <!-- Budget -->
+
+            <div class="col-12">
+
+                <label class="form-label">
+
+                    <i class="fa-solid fa-wallet"></i>
+
+                    Budget
+
+                </label>
+
+                <div class="budget-box">
+
+                    <strong id="budgetValue">
+
+                        ₹20,000
+
+                    </strong>
+
+                    <input
+                        type="range"
+                        id="budget"
+                        class="budget-slider"
+                        min="2000"
+                        max="100000"
+                        value="20000"
+                        step="1000">
+
+                    <div class="budget-range">
+
+                        <span>₹2,000</span>
+
+                        <span>₹1,00,000+</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- =======================================================
+                    DAYS & TRAVELERS
+======================================================= -->
+
+<div class="col-md-6">
+
+    <label class="form-label">
+
+        <i class="fa-solid fa-calendar-days"></i>
+
+        Duration
+
+    </label>
+
+    <select
+        class="form-select planner-input"
+        id="days"
+        required>
+
+        <option value="">Select Duration</option>
+
+        <option value="2">Weekend (2 Days)</option>
+
+        <option value="3">3 Days</option>
+
+        <option value="4">4 Days</option>
+
+        <option value="5">5 Days</option>
+
+        <option value="7">1 Week</option>
+
+        <option value="10">10 Days</option>
+
+        <option value="14">2 Weeks</option>
+
+    </select>
+
+</div>
+
+<div class="col-md-6">
+
+    <label class="form-label">
+
+        <i class="fa-solid fa-users"></i>
+
+        Travelers
+
+    </label>
+
+    <select
+        class="form-select planner-input"
+        id="travelers"
+        required>
+
+        <option value="">Select</option>
+
+        <option value="1">1 Person</option>
+
+        <option value="2">2 Persons</option>
+
+        <option value="3">3 Persons</option>
+
+        <option value="4">4 Persons</option>
+
+        <option value="5">5 Persons</option>
+
+        <option value="6+">6+ Persons</option>
+
+    </select>
+
+</div>
+
+<!-- =======================================================
+                    TRIP TYPE
+======================================================= -->
+
+<div class="col-12">
+
+    <label class="form-label">
+
+        <i class="fa-solid fa-suitcase"></i>
+
+        Trip Type
+
+    </label>
+
+    <div class="trip-chip-group">
+
+        <button type="button" class="trip-chip active" data-type="Solo">
+            👤 Solo
+        </button>
+
+        <button type="button" class="trip-chip" data-type="Couple">
+            ❤️ Couple
+        </button>
+
+        <button type="button" class="trip-chip" data-type="Family">
+            👨‍👩‍👧 Family
+        </button>
+
+        <button type="button" class="trip-chip" data-type="Friends">
+            👥 Friends
+        </button>
+
+        <button type="button" class="trip-chip" data-type="Business">
+            💼 Business
+        </button>
+
+    </div>
+
+    <input
+        type="hidden"
+        id="tripType"
+        value="Solo">
+
+</div>
+           <!-- =======================================================
+                    TRAVEL INTERESTS
+======================================================= -->
+
+<div class="col-12">
+
+    <label class="form-label">
+
+        <i class="fa-solid fa-heart"></i>
+
+        Choose Your Travel Interests
+
+    </label>
+
+    <p class="planner-small-text">
+
+        Select one or more interests to personalize your itinerary.
+
+    </p>
+
+    <div class="interest-chip-group">
+
+        <button type="button" class="interest-chip" data-interest="Adventure">🏔 Adventure</button>
+
+        <button type="button" class="interest-chip" data-interest="Nature">🌿 Nature</button>
+
+        <button type="button" class="interest-chip" data-interest="Beach">🏖 Beach</button>
+
+        <button type="button" class="interest-chip" data-interest="Historical">🏛 Historical</button>
+
+        <button type="button" class="interest-chip" data-interest="Food">🍽 Food</button>
+
+        <button type="button" class="interest-chip" data-interest="Shopping">🛍 Shopping</button>
+
+        <button type="button" class="interest-chip" data-interest="Photography">📸 Photography</button>
+
+        <button type="button" class="interest-chip" data-interest="Wildlife">🦁 Wildlife</button>
+
+        <button type="button" class="interest-chip" data-interest="Luxury">✨ Luxury</button>
+
+        <button type="button" class="interest-chip" data-interest="Spiritual">🛕 Spiritual</button>
+
+    </div>
+
+    <input
+        type="hidden"
+        id="interest"
+        value="">
+
+</div>
+
+<!-- =======================================================
+                    GENERATE BUTTON
+======================================================= -->
+
+<div class="col-12">
+
+    <button
+    type="submit"
+    id="generateBtn"
+    class="planner-btn">
+
+        <i class="fa-solid fa-sparkles"></i>
+
+        Generate AI Travel Plan
+
+    </button>
+
+</div>
+
+        </div> <!-- row -->
+
+    </form>
+
+</div> <!-- planner-card -->
+
+        </div> <!-- col-lg-7 -->
+
+    </div> <!-- row -->
+
+    <!-- AI Result -->
+
+    <div id="result" class="mt-5"></div>
+
+</div> <!-- container -->
+
+</section>

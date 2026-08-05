@@ -1,0 +1,417 @@
+/* ==========================================================
+                    DESTINATION SECTION
+========================================================== */
+
+.destinations{
+
+    position:relative;
+
+    padding:120px 0;
+
+    background:linear-gradient(180deg,#f8fbff 0%,#eef5ff 100%);
+
+    overflow:hidden;
+
+}
+
+.destinations::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+
+    height:420px;
+
+    background:#2563eb18;
+
+    border-radius:50%;
+
+    top:-180px;
+
+    left:-180px;
+
+    filter:blur(120px);
+
+}
+
+.destinations::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+
+    height:350px;
+
+    background:#7c3aed15;
+
+    border-radius:50%;
+
+    bottom:-150px;
+
+    right:-150px;
+
+    filter:blur(120px);
+
+}
+
+.destinations .container{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/* ==========================================================
+                    SECTION TITLE
+========================================================== */
+
+.section-title{
+
+    margin-bottom:70px;
+
+}
+
+.section-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:10px 22px;
+
+    border-radius:50px;
+
+    background:white;
+
+    color:#2563eb;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.section-title h2{
+
+    margin-top:20px;
+
+    font-size:52px;
+
+    font-weight:800;
+
+    color:#0f172a;
+
+}
+
+.section-title p{
+
+    width:min(700px,100%);
+
+    margin:20px auto 0;
+
+    color:#64748b;
+
+    line-height:1.9;
+
+    font-size:18px;
+
+}
+
+/* ==========================================================
+                    CSS GRID
+========================================================== */
+
+.destination-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+
+    gap:35px;
+
+}
+
+/* ==========================================================
+                    CARD
+========================================================== */
+
+.destination-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:28px;
+
+    background:#fff;
+
+    transition:.45s;
+
+    box-shadow:
+
+        0 20px 40px rgba(15,23,42,.08);
+
+}
+/* ==========================================================
+                    DESTINATION IMAGE
+========================================================== */
+
+.destination-image{
+
+    position:relative;
+
+    height:260px;
+
+    overflow:hidden;
+
+}
+
+.destination-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:0.5s ease;
+
+}
+
+.destination-card:hover .destination-image img{
+
+    transform:scale(1.08);
+
+}
+
+.image-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.05)
+    );
+
+}
+
+.wishlist-btn{
+
+    position:absolute;
+
+    top:18px;
+
+    left:18px;
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#ffffffee;
+
+    cursor:pointer;
+
+    z-index:5;
+
+}
+
+.rating-badge{
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    background:#fff;
+
+    padding:8px 15px;
+
+    border-radius:30px;
+
+    font-weight:700;
+
+    z-index:5;
+
+}
+/* ==========================================================
+                    CARD CONTENT
+========================================================== */
+
+.destination-content{
+
+    padding:30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    height:100%;
+
+}
+
+.destination-tag{
+
+    display:inline-block;
+
+    align-self:flex-start;
+
+    padding:8px 18px;
+
+    margin-bottom:18px;
+
+    border-radius:40px;
+
+    background:#eef4ff;
+
+    color:#2563eb;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+.destination-content h3{
+
+    font-size:32px;
+
+    font-weight:800;
+
+    color:#0f172a;
+
+    margin-bottom:15px;
+
+}
+
+.destination-location{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#64748b;
+
+    margin-bottom:18px;
+
+}
+
+.destination-location i{
+
+    color:#2563eb;
+
+}
+
+.destination-content p{
+
+    color:#64748b;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+}
+
+.destination-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:
+
+        0 35px 70px rgba(37,99,235,.20);
+
+}
+/* ==========================================================
+                    PLAN TRIP BUTTON
+========================================================== */
+
+.explore-btn{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:16px;
+
+    margin-top:25px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:linear-gradient(135deg,#2563eb,#4f46e5);
+
+    color:#fff;
+
+    font-weight:700;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+/* ==========================================
+        SEARCH HIGHLIGHT
+========================================== */
+
+.search-highlight{
+
+    animation: searchGlow 2s ease;
+
+}
+
+@keyframes searchGlow{
+
+    0%{
+
+        transform: scale(1);
+
+        box-shadow: none;
+
+    }
+
+    50%{
+
+        transform: scale(1.03);
+
+        box-shadow: 0 0 25px rgba(13,110,253,.6);
+
+    }
+
+    100%{
+
+        transform: scale(1);
+
+        box-shadow: none;
+
+    }
+
+}

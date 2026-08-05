@@ -1,0 +1,73 @@
+<div class="col-lg-4 col-md-6">
+
+    <div class="destination-card premium-card">
+
+        <div class="destination-image">
+
+            <img
+                src="{{ image }}"
+                alt="{{ title }}">
+
+            <div class="image-overlay"></div>
+
+            <!-- Wishlist -->
+
+            <button class="wishlist-btn">
+
+                <i class="fa-regular fa-heart"></i>
+
+            </button>
+
+            <!-- Rating -->
+
+            <div class="rating-badge">
+
+                ⭐ {{ rating }}
+
+            </div>
+
+        </div>
+
+        <div class="destination-content">
+
+            <span class="destination-tag">
+
+                {{ tag }}
+
+            </span>
+
+            <h3>
+
+                {{ icon }} {{ title }}
+
+            </h3>
+
+            <p class="destination-location">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                {{ location }}
+
+            </p>
+
+            <p>
+
+                {{ description }}
+
+            </p>
+
+            <button
+                class="explore-btn plan-trip-btn"
+                data-destination="{{ title }}">
+
+                ✨ Plan Trip
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
