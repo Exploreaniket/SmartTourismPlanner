@@ -119,25 +119,37 @@ function renderWeather(data) {
 
         <div class="summary-box">
 
-            <small>🌅 Sunrise</small>
+    <small>🌅 Sunrise</small>
 
-            <h5>${new Date(weather.sunrise).toLocaleTimeString([],{
-                hour:'2-digit',
-                minute:'2-digit'
-            })}</h5>
+    <h5>
+        ${
+            weather.sunrise
+                ? new Date(weather.sunrise * 1000).toLocaleTimeString([], {
+                    hour: "2-digit",
+                    minute: "2-digit"
+                })
+                : "--"
+        }
+    </h5>
 
-        </div>
+</div>
 
         <div class="summary-box">
 
-            <small>🌇 Sunset</small>
+    <small>🌇 Sunset</small>
 
-            <h5>${new Date(weather.sunset).toLocaleTimeString([],{
-                hour:'2-digit',
-                minute:'2-digit'
-            })}</h5>
+    <h5>
+        ${
+            weather.sunset
+                ? new Date(weather.sunset * 1000).toLocaleTimeString([], {
+                    hour: "2-digit",
+                    minute: "2-digit"
+                })
+                : "--"
+        }
+    </h5>
 
-        </div>
+</div>
 
     </div>
 
