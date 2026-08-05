@@ -1,79 +1,70 @@
 # 🌍 Smart Tourism Planner
 
-An AI-powered tourism planning web application that helps users generate personalized travel itineraries based on their destination, budget, travel duration, interests, and travel type. The application also provides real-time weather information, interactive maps, nearby hotels, restaurants, tourist attractions, and downloadable trip reports.
+An AI-powered travel planning web application that generates personalized travel itineraries based on user preferences. The application provides live weather updates, nearby tourist attractions, interactive maps, and AI-generated travel plans to help users organize their trips efficiently.
 
 ---
 
-## 📸 Project Preview
+## 🚀 Live Demo
 
-> Add screenshots of your application here after uploading them.
-
-| Home Page | Trip Dashboard |
-|-----------|----------------|
-| ![Home](screenshots/home.png) | ![Dashboard](screenshots/dashboard.png) |
-
-| Weather & Map | Hotels & Restaurants |
-|---------------|----------------------|
-| ![Weather](screenshots/weather.png) | ![Places](screenshots/places.png) |
+🔗 https://smarttourismplanner.onrender.com
 
 ---
 
-# ✨ Features
+## ✨ Features
 
-- 🤖 AI-powered personalized trip planning using Google Gemini AI
-- 🌤 Real-time weather information using Open-Meteo API
-- 🗺 Interactive destination map using Leaflet.js
+- 🤖 AI-powered travel itinerary generation using Google Gemini AI
+- 🌦️ Live weather updates using OpenWeather API
+- 🗺️ Interactive destination map
 - 📍 Nearby tourist attractions
-- 🏨 Hotel recommendations
-- 🍽 Restaurant recommendations
-- 💰 Budget estimation
-- 📅 Day-wise travel itinerary
-- 🎒 Packing checklist
-- 🚨 Emergency travel information
-- 💡 Travel tips and recommendations
-- 📄 Download trip plan as PDF
-- 🔒 Secure API key management using `.env`
+- 💰 Budget-based trip planning
+- 👨‍👩‍👧 Traveler-based recommendations
+- ❤️ Interest-based travel suggestions
+- 🧭 Personalized travel experience
+- 🔍 Destination search
+- 📱 Fully responsive design
+- ⚡ Fast and user-friendly interface
+- ☁️ Deployed on Render
 
 ---
 
-# 🛠 Tech Stack
+## 🛠️ Tech Stack
 
 ### Frontend
 - HTML5
 - CSS3
-- Bootstrap 5
 - JavaScript
-- Leaflet.js
 
 ### Backend
 - Python
 - Flask
 
-### APIs
-- Google Gemini AI
-- Geoapify API
-- Open-Meteo API
+### APIs Used
+- Google Gemini API
+- OpenWeather API
+- Geoapify Geocoding API
+- Geoapify Places API
 
-### Database
-- No database (Current Version)
+### Deployment
+- GitHub
+- Render
 
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
-```text
+```
 SmartTourismPlanner/
-
-│── app.py
-│── requirements.txt
-│── .env
-│── .env.example
-│── .gitignore
+│
+├── app.py
+├── requirements.txt
+├── README.md
+├── .env.example
+├── .gitignore
 │
 ├── services/
 │   ├── ai_service.py
-│   ├── geocode.py
 │   ├── weather.py
+│   ├── geocoding.py
 │   └── places.py
 │
 ├── static/
@@ -81,48 +72,49 @@ SmartTourismPlanner/
 │   ├── js/
 │   └── images/
 │
-├── templates/
-│   ├── base.html
-│   └── index.html
-│
-└── README.md
+└── templates/
+    ├── base.html
+    ├── index.html
+    └── dashboard.html
 ```
 
 ---
 
-# 🚀 Installation
+## ⚙️ Installation
 
-## 1. Clone the repository
+### 1. Clone the Repository
 
 ```bash
-git clone https://github.com//SmartTourismPlanner.git
+git clone https://github.com/Exploreaniket/SmartTourismPlanner.git
 
 cd SmartTourismPlanner
 ```
 
 ---
 
-## 2. Create Virtual Environment
-
-### Windows
+### 2. Create Virtual Environment
 
 ```bash
 python -m venv venv
+```
 
+Activate the virtual environment
+
+#### Windows
+
+```bash
 venv\Scripts\activate
 ```
 
-### Linux / macOS
+#### Linux / macOS
 
 ```bash
-python3 -m venv venv
-
 source venv/bin/activate
 ```
 
 ---
 
-## 3. Install Dependencies
+### 3. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -130,23 +122,25 @@ pip install -r requirements.txt
 
 ---
 
-## 4. Create `.env`
+### 4. Configure Environment Variables
+
+Create a `.env` file in the project root.
 
 ```env
-GEMINI_API_KEY=YOUR_GEMINI_API_KEY
-
-GEOAPIFY_API_KEY=YOUR_GEOAPIFY_API_KEY
+GEMINI_API_KEY=your_gemini_api_key
+OPENWEATHER_API_KEY=your_openweather_api_key
+GEOAPIFY_API_KEY=your_geoapify_api_key
 ```
 
 ---
 
-## 5. Run Application
+### 5. Run the Application
 
 ```bash
 python app.py
 ```
 
-Open your browser:
+Open your browser and visit
 
 ```
 http://127.0.0.1:5000
@@ -154,114 +148,116 @@ http://127.0.0.1:5000
 
 ---
 
-# ⚙ APIs Used
+## 📸 Screenshots
 
-## Google Gemini AI
+Add screenshots of your application here.
 
-Used for:
+Example:
 
-- AI trip generation
-- Personalized recommendations
-- Day-wise itinerary
-- Budget suggestions
-- Travel tips
-
----
-
-## Geoapify API
-
-Used for:
-
-- Geocoding
-- Tourist attractions
-- Hotels
-- Restaurants
-- Interactive destination mapping
-
----
-
-## Open-Meteo API
-
-Used for:
-
-- Temperature
-- Weather condition
-- Humidity
-- Wind speed
-- Sunrise
-- Sunset
-
----
-
-# 📸 Main Modules
-
-- AI Trip Planner
-- Weather Dashboard
-- Interactive Map
-- Nearby Hotels
-- Nearby Restaurants
-- Tourist Attractions
-- Budget Planner
-- Packing List
-- Emergency Information
-- PDF Export
-
----
-
-# 🔐 Environment Variables
-
-Create a `.env` file in the project root.
-
-```env
-GEMINI_API_KEY=YOUR_GEMINI_API_KEY
-
-GEOAPIFY_API_KEY=YOUR_GEOAPIFY_API_KEY
+```
+screenshots/
+│── home.png
+│── planner.png
+│── dashboard.png
+│── weather.png
 ```
 
-Never upload your `.env` file to GitHub.
+---
+
+## 🌟 Key Functionalities
+
+### 🤖 AI Trip Planner
+
+Generates personalized travel itineraries based on:
+
+- Destination
+- Budget
+- Number of days
+- Travel interests
+- Number of travelers
+- Trip type
 
 ---
 
-# 🌟 Future Improvements
+### 🌦️ Live Weather
 
-- User Login & Authentication
-- Save Trip History
-- Share Trip Plans
-- Favorite Destinations
-- Multi-language Support
-- Currency Converter
-- Offline Mode
-- Travel Expense Tracker
+Displays:
 
----
-
-# 🤝 Contributing
-
-Contributions are welcome.
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Open a Pull Request
+- Temperature
+- Feels Like
+- Humidity
+- Wind Speed
+- Sunrise
+- Sunset
+- Weather Description
+- Travel Advice
 
 ---
 
-# 📄 License
+### 🗺️ Interactive Map
 
-This project is developed for educational and portfolio purposes.
+Provides destination location using an interactive map for better navigation.
 
 ---
 
-# 👨‍💻 Author
+### 📍 Nearby Attractions
+
+Shows popular tourist attractions around the selected destination.
+
+---
+
+## 🔐 Environment Variables
+
+The project requires the following API keys.
+
+| Variable | Description |
+|----------|-------------|
+| GEMINI_API_KEY | Google Gemini AI API Key |
+| OPENWEATHER_API_KEY | OpenWeather API Key |
+| GEOAPIFY_API_KEY | Geoapify API Key |
+
+---
+
+## 🚀 Deployment
+
+This project is deployed on **Render**.
+
+To deploy:
+
+1. Push code to GitHub.
+2. Connect the repository to Render.
+3. Add environment variables.
+4. Deploy.
+
+---
+
+## 📈 Future Enhancements
+
+- 🔐 User Authentication
+- ❤️ Save Favorite Trips
+- 📄 Download Trip as PDF
+- 🏨 Hotel Recommendations
+- ✈️ Flight Suggestions
+- 💬 AI Travel Chat Assistant
+- 🌐 Multi-language Support
+- 💳 Travel Expense Calculator
+
+---
+
+## 👨‍💻 Author
 
 **Aniket Prajapati**
 
-- B.Tech Computer Science & Engineering
-- Java Backend Developer
-- AI & Web Development Enthusiast
+GitHub:
+https://github.com/Exploreaniket
+
+Project Repository:
+https://github.com/Exploreaniket/SmartTourismPlanner
 
 ---
 
-## ⭐ Support
+## 📜 License
 
-If you like this project, consider giving it a **⭐ Star** on GitHub.
+This project is developed for educational and portfolio purposes.
+
+© 2026 Aniket Prajapati. All Rights Reserved.
