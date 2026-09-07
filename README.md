@@ -128,7 +128,6 @@ Designed to provide a usable experience across different screen sizes.
 
 ![Interactive Map](screenshots/map.png)
 
-> **Note:** Add the corresponding images to a `screenshots/` folder in the repository before publishing these image paths.
 
 ---
 
