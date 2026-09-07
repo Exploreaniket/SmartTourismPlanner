@@ -120,9 +120,6 @@ Designed to provide a usable experience across different screen sizes.
 
 ![AI Generated Itinerary](screenshots/itinerary.png)
 
-### Weather & Attractions
-
-![Weather and Attractions](screenshots/weather-attractions.png)
 
 ### Interactive Map
 
