@@ -106,7 +106,6 @@ Designed to provide a usable experience across different screen sizes.
 
 ## 🖥️ Screenshots
 
-> Screenshots will be added here to demonstrate the application interface and major features.
 
 ### Home Page
 
